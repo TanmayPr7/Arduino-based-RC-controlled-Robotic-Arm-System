@@ -12,3 +12,11 @@
 3.Jumper Cables
 4.Breadboard, or
 5.Arduino Nano Expansion Board
+
+# Components for Transmitter
+1.Arduino Nano
+2.HC 05 Bluetooth Module
+3.Arduino Joystick *2
+4.Jumper Cables
+5.Breadboard, or
+6.Arduino Nano Expansion Board

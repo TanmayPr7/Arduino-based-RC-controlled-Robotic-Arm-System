@@ -4,3 +4,11 @@
 3.MG995 Metal Gear Servo
 4.Mg90S Gear Servo *2
 5.12v Battery
+6.Jumper Cables
+
+# Components for Reciver
+1.Arduino Nano
+2.HC 05 Bluetooth Module
+3.Jumper Cables
+4.Breadboard, or
+5.Arduino Nano Expansion Board

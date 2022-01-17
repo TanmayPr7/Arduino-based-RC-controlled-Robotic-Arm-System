@@ -1,0 +1,6 @@
+# Components Required
+1.RC Transmitter
+2.RC Reciver
+3.MG995 Metal Gear Servo
+4.Mg90S Gear Servo *2
+5.12v Battery

@@ -1,1 +1,1 @@
-# Arduino-based-RC-controlled-Robotic-Arm-System
+# Arduino-based-RC-Controlled-Robotic-Arm-System

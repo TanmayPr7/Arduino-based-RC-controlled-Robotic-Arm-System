@@ -23,3 +23,11 @@
 
 # Library Required
 1.No Library Required for thsi project
+
+# Hardware Components
+1.Pair of Scissors
+2.Soldering Iron
+3.Double Sided Tape
+4.Instant Glue
+5.Cardboard or Sunboard
+6.Paper Tape

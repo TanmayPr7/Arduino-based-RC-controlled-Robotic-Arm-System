@@ -31,3 +31,5 @@
 4.Instant Glue
 5.Cardboard or Sunboard
 6.Paper Tape
+
+#That's it these are all the basic requirements for thsi project:)

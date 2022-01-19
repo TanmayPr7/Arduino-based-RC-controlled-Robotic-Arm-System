@@ -8,3 +8,8 @@ and according to the position of its joysticks it transmittes RF signals, which 
 reciver. After, reciving signals from transmitter reciver according to its source code or program
 checks the signal and works according to the code and makes the servo or any other part connected
 to reciver moves according to source code.
+
+# In this case Rc transmitter transmites values, which later recived by Rc reciver and then reciver
+according to its source code make the robotic arm move according to program. Ex. If transmitter sends
+signal to make the robotic arm move in forward direction then reciver will recive the signal and make
+the robotic arm move in forward direction accoeding to its program.

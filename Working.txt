@@ -1,0 +1,2 @@
+# This is an Ardiuno based RC Robotic Arm Project, which uses a microcontroller(Arduino), servo's,
+12v power supply, RC transmitter, RC reciver , etc.

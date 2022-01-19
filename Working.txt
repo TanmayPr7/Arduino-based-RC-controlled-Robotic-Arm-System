@@ -13,3 +13,5 @@ to reciver moves according to source code.
 according to its source code make the robotic arm move according to program. Ex. If transmitter sends
 signal to make the robotic arm move in forward direction then reciver will recive the signal and make
 the robotic arm move in forward direction accoeding to its program.
+
+# This the baisc working principle of Arduino based RC controlled Robotic Arm project:)

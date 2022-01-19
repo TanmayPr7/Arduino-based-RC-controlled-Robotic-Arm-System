@@ -1,2 +1,4 @@
 # This is an Ardiuno based RC Robotic Arm Project, which uses a microcontroller(Arduino), servo's,
-12v power supply, RC transmitter, RC reciver , etc.
+12v power supply, RC transmitter, RC reciver , etc. Robotic Arm is connected to a Rc reciver which
+recives signals transmitted by Rc transmitter and works according to the source code and makes the
+servo's move according to the program.

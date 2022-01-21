@@ -1,16 +1,20 @@
 # Transmitter Part
 
-#include <Servo.h>  // add servo library
- 
-Servo myservo;  // create servo object to control a servo
- 
-int joystick = 0;  // analog pin used to connect the potentiometer
-int val;    // variable to read the value from the analog pin
- 
+int joyx;
+int joyy;
+int stickx;
+int sticky;
+char val;
+
 void setup() {
-  Serial.begin(38400);
-  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
-  val = analogRead(joystick);
-  val = map(val, 0, 1023, 0, 180);
+  Serial.begin(38400); // Default communication rate of the Bluetooth module
 }
- 
+
+void loop(){
+  joyy = analogRead(A1);
+  joyy = map(joyy, 0, 1023, 0, 180);
+  Serial.write(joyy);
+  delay(10);
+)
+
+# That's it this the basic test code for Transmitter

@@ -1,0 +1,16 @@
+# Transmitter Part
+
+#include <Servo.h>  // add servo library
+ 
+Servo myservo;  // create servo object to control a servo
+ 
+int joystick = 0;  // analog pin used to connect the potentiometer
+int val;    // variable to read the value from the analog pin
+ 
+void setup() {
+  Serial.begin(38400);
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+  val = analogRead(joystick);
+  val = map(val, 0, 1023, 0, 180);
+}
+ 

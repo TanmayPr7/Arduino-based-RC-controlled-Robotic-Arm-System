@@ -17,3 +17,5 @@ void loop(){
   myservo.write(val);
   delay(10);
 }
+
+//That's it this is the basic Test Code for Reciver Part

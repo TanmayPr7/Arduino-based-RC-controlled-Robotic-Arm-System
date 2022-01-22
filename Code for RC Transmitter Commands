@@ -1,0 +1,79 @@
+# This is the main Source code of Transmitter for this Project
+
+joyx;
+int joyy;
+int stickx;
+int stickyint;
+
+void setup() {
+  Serial.begin(38400); // Default communication rate of the Bluetooth module
+}
+
+void loop() {
+ int joyx = analogRead(A0);
+ int joyy = analogRead(A1);
+ int stickx = analogRead(A2);
+ int sticky = analogRead(A3);
+
+ /*//joyx = analogRead(A0);
+ Serial.print("Value of joyx is: ");
+ Serial.println(joyx);
+ //***********************************
+ //joyy = analogRead(A1);
+ Serial.print("Value of joyy is: ");
+ Serial.println(joyy);
+ delay(3000);                                 //For Checking Purpose
+
+ //stickx = analogRead(A2);
+ Serial.print("Value of stickx is: ");
+ Serial.println(stickx);
+ //*************************************
+ //sticky = analogRead(A3);
+ Serial.print("Value of sticky is: ");
+ Serial.println(sticky);
+ delay(3000);*/
+
+ if(joyx >=1010 && (joyy >=460 && joyy <=495) && stickx >=1010 && (sticky >=510 && sticky <=535)){
+  //int val = 1;
+  Serial.write('A');
+  delay(10);
+  //val = 'F';
+  //Serial.println("Joystick Forward");
+ }
+ else if(joyx <10 && (joyy >=460 && joyy <=495) && stickx <25 && (sticky >=510 && sticky <=535)){
+  //int val = 2;
+  Serial.write('B');
+  delay(10);
+  //val = 'B';
+  //Serial.println("Joystick Backward");
+ }
+ else if((joyx >500 && joyx<=530) && (joyy >460 && joyy <=485)){
+  int sense;
+  sense = analogRead(A3);
+  sense = map(sense, 10, 1023, 1, 9);
+  Serial.println(sense);
+  Serial.write(sense);
+  delay(10);
+ }
+ else if((stickx >500 && stickx<=530) && sticky >1010 && joyy >1010 && (joyx >500 && joyx <=535)){
+  //int val = 3;
+  Serial.write('C');
+  delay(10);
+  //val = 'R';
+  //Serial.println("Joystick Rightward");
+ }
+ else if((stickx >500 && stickx<=530) && sticky <25 && joyy <10 && (joyx >500 && joyx <=530)){
+  //int val = 4;
+  Serial.write('D');
+  delay(10);
+  //val = 'L';
+  //Serial.println("Joystick Leftward");
+ }   
+ /*else{
+  int val = 5;
+  Serial.write(val);
+  delay(10);
+  //val = 'E';
+  //Serial.println("Error!");
+ }*/
+}

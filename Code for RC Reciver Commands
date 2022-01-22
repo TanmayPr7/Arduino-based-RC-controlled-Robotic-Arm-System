@@ -1,0 +1,46 @@
+# This is the basic Source code of Reciver for this project
+
+char val;
+
+void setup() {
+  Serial.begin(38400); // Default communication rate of the Bluetooth module
+}
+
+void loop() {
+ if(Serial.available() > 0){ // Checks whether data is comming from the serial port
+    val = Serial.read(); // Reads the data from the serial port
+ }
+ //Serial.println(val);
+ //delay(1000);
+ 
+  if(val=='A'){
+    //Serial.println("Forward");
+    Serial.println(val);
+    delay(1000);
+  }
+  else if(val=='B'){
+    //Serial.println("Backward");
+    Serial.println(val);
+    delay(1000);
+  }
+  else if(val=='c'){
+   //Serial.println("Rightward");
+    Serial.println(val);
+    delay(1000);
+  }
+  else if(val=='d'){
+    //Serial.println("Leftward");
+    Serial.println(val);
+    delay(1000);
+  }
+  else if(val >=1 && val <=9){
+    //Serial.println("rking");
+    Serial.println(val);
+    delay(1000);
+  }
+  /*else{
+    Serial.println("Error!");
+    Serial.println(val);
+    delay(1000);
+  }*/
+}

@@ -32,4 +32,29 @@ void loop() {
  Serial.print("Value of sticky is: ");
  Serial.println(sticky);
  delay(3000);
+ 
+ if(joyx >=175 && (joyy >=80 && joyy <=88) && (stickx >=85  && stickx <=95) && (sticky >=85 && sticky <=95)){
+  Serial.write('F');
+  delay(10);
+ }
+ else if(joyx <5 && (joyy >=80 && joyy <=88) && (stickx >=85 && stickx <=95) && (sticky >=85 && sticky <=95)){
+  Serial.write('B');
+  delay(10);
+ }
+ else if((joyx >=85 && joyx <=95) && (joyy >=80 && joyy <=88) && (stickx >=85 && stickx <=95) && (sticky >=85 && sticky <=95)){
+  Serial.write('S');
+  delay(10);
+ }
+ else if((stickx >=85 && stickx <=95) && (sticky >=85 && sticky <=95) && joyy >=175 && (joyx >=85 && joyx <=95)){
+  Serial.write('R');
+  delay(10);
+ }
+ else if((stickx >=85 && stickx <=95) && (sticky >=85 && sticky <=95) && joyy <5 && (joyx >=85 && joyx <=95)){
+  Serial.write('L');
+  delay(10);
+ }   
+ else{
+  Serial.write('E');
+  delay(10);
+ }
 }

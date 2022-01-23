@@ -7,3 +7,15 @@ char val;
 void setup() {
   Serial.begin(38400); // Default communication rate of the Bluetooth module
 }
+
+void loop() {
+ int joyx = analogRead(A0);
+ int joyy = analogRead(A1);
+ int stickx = analogRead(A2);
+ int sticky = analogRead(A3);
+
+ joyx = map(joyx, 0, 1023, 0, 180);
+ joyy = map(joyy, 0, 1023, 0, 180);
+ stickx = map(stickx, 0, 1023, 0, 180);
+ sticky = map(sticky, 0, 1023, 0, 180);
+}

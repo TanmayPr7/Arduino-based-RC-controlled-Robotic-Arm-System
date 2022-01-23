@@ -18,4 +18,18 @@ void loop() {
  joyy = map(joyy, 0, 1023, 0, 180);
  stickx = map(stickx, 0, 1023, 0, 180);
  sticky = map(sticky, 0, 1023, 0, 180);
+ 
+ Serial.print("Value of joyx is: ");
+ Serial.println(joyx);
+ 
+ Serial.print("Value of joyy is: ");
+ Serial.println(joyy);
+ delay(3000);                                 //For Checking Purpose
+
+ Serial.print("Value of stickx is: ");
+ Serial.println(stickx);
+ 
+ Serial.print("Value of sticky is: ");
+ Serial.println(sticky);
+ delay(3000);
 }

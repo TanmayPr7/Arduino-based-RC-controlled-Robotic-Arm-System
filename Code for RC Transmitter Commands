@@ -2,7 +2,6 @@ int joyx;
 int joyy;
 int stickx;
 int sticky;
-char val;
 
 void setup() {
   Serial.begin(38400); // Default communication rate of the Bluetooth module
@@ -18,21 +17,25 @@ void loop() {
  joyy = map(joyy, 0, 1023, 0, 180);
  stickx = map(stickx, 0, 1023, 0, 180);
  sticky = map(sticky, 0, 1023, 0, 180);
- 
+
+ ///joyx = analogRead(A0);
  Serial.print("Value of joyx is: ");
  Serial.println(joyx);
- 
+ //***********************************
+ //joyy = analogRead(A1);
  Serial.print("Value of joyy is: ");
  Serial.println(joyy);
  delay(3000);                                 //For Checking Purpose
 
+ //stickx = analogRead(A2);
  Serial.print("Value of stickx is: ");
  Serial.println(stickx);
- 
+ //*************************************
+ //sticky = analogRead(A3);
  Serial.print("Value of sticky is: ");
  Serial.println(sticky);
  delay(3000);
- 
+
  if(joyx >=175 && (joyy >=80 && joyy <=88) && (stickx >=85  && stickx <=95) && (sticky >=85 && sticky <=95)){
   Serial.write('F');
   delay(10);
@@ -52,7 +55,19 @@ void loop() {
  else if((stickx >=85 && stickx <=95) && (sticky >=85 && sticky <=95) && joyy <5 && (joyx >=85 && joyx <=95)){
   Serial.write('L');
   delay(10);
- }   
+ }
+ else if(joyx >=80 && joyx <=95) && (joyy >=80 && joyy <=95) && (stickx >=85  && stickx <=95) && (sticky >=85 && sticky <=95)){
+  Serial.write('s');
+  delay(10);
+ }
+ else if(joyx >=80 && joyx <=95) && (joyy >=80 && joyy <=95) && (stickx >=85  && stickx <=95) && sticky <=5){
+  Serial.write('l');
+  delay(10);
+ }
+ else if(joyx >=80 && joyx <=95) && (joyy >=80 && joyy <=95) && (stickx >=85  && stickx <=95) && (sticky >=85 && sticky <=95)){
+  Serial.write('s');
+  delay(10);
+ }
  else{
   Serial.write('E');
   delay(10);

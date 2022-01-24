@@ -1,7 +1,3 @@
-int joyx;
-int joyy;
-int stickx;
-int sticky;
 
 void setup() {
   Serial.begin(38400); // Default communication rate of the Bluetooth module
@@ -56,16 +52,12 @@ void loop() {
   Serial.write('L');
   delay(10);
  }
- else if(joyx >=80 && joyx <=95) && (joyy >=80 && joyy <=95) && (stickx >=85  && stickx <=95) && (sticky >=85 && sticky <=95)){
-  Serial.write('s');
-  delay(10);
- }
  else if(joyx >=80 && joyx <=95) && (joyy >=80 && joyy <=95) && (stickx >=85  && stickx <=95) && sticky <=5){
   Serial.write('l');
   delay(10);
  }
- else if(joyx >=80 && joyx <=95) && (joyy >=80 && joyy <=95) && (stickx >=85  && stickx <=95) && (sticky >=85 && sticky <=95)){
-  Serial.write('s');
+ else if((joyx >=80 && joyx <=95) && (joyy >=80 && joyy <=95) && (stickx >=85  && stickx <=95) && sticky >=175){
+  Serial.write('r');
   delay(10);
  }
  else{
@@ -73,3 +65,5 @@ void loop() {
   delay(10);
  }
 }
+
+//That's it this is the basic source code for this project:)

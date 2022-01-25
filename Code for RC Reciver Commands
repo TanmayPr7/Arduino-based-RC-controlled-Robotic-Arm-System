@@ -1,11 +1,16 @@
 # This is the basic Source code of Reciver for this project
 
 #include <Servo.h>
-int servopin = 5;
-Servo myservo;
+int BServo = 5;
+int FServo = 6;
+int MServo = 3;
+Servo bservo, fservo, mservo;
 char val;
 
+
 void setup() {
-  myservo.attach(servopin);
+  bservo.attach(BServo);
+  fservo.attach(FServo);
+  mservo.attach(MServo);
   Serial.begin(38400); // Default communication rate of the Bluetooth module
 }

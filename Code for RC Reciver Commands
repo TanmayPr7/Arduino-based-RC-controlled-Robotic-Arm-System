@@ -19,3 +19,47 @@ void loop() {
  if(Serial.available() > 0){ // Checks whether data is comming from the serial port
     val = Serial.read(); // Reads the data from the serial port
  }
+ //Serial.println(val);
+ //delay(1000);
+ 
+  if(val=='F'){
+    bservo.write(0);
+    Serial.println(val);
+    delay(10);
+  }
+  else if(val=='B'){
+    bservo.write(45);
+    Serial.println(val);
+    delay(10);
+  }
+  else if(val=='S'){
+    bservo.write(90);
+    fservo.write(90);
+    Serial.println(val);
+    delay(10);
+  }
+  else if(val=='R'){
+    fservo.write(180);
+    Serial.println(val);
+    delay(10);
+  }
+  else if(val=='L'){
+    fservo.write(135);
+    Serial.println(val);
+    delay(10);
+  }
+  else if(val=='l'){
+    mservo.write(135);
+    Serial.println(val);
+    delay(10);
+  }
+  else if(val=='r'){
+    mservo.write(45);
+    Serial.println(val);
+    delay(10);
+  }
+  else{
+    Serial.println(val);
+    delay(10);
+  }
+}

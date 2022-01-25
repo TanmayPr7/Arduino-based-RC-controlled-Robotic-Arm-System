@@ -14,3 +14,8 @@ void setup() {
   mservo.attach(MServo);
   Serial.begin(38400); // Default communication rate of the Bluetooth module
 }
+
+void loop() {
+ if(Serial.available() > 0){ // Checks whether data is comming from the serial port
+    val = Serial.read(); // Reads the data from the serial port
+ }
